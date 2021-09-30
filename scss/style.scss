@@ -14,36 +14,105 @@ $very-dark-gray: hsl(0, 0%, 27%);
 body {
     font-size: 12px;
     font-family: 'Spartan', sans-serif;
-    background-color: darkgrey;
 }
 
 .top {
     display: flex;
-    width: 100%;
     position: relative;
+    background-color: $white;
 
-    #prev, #next {
-        cursor: pointer;
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         position: absolute;
-        background-color: rgba(0,0,0,0.8);
-        top: 50%;
-        width: auto;
-        padding: 20px;
-        margin-top: -22px;
-        color: white;
-        font-weight: bold;
-        font-size: 40px;
-        transition: 0.6s ease;
-        border-radius: 0 8px 8px 0;
-        user-select: none;
-        display: inline-block;
-        border: none;
-        transition: all 0.5s;
+        padding: 40px 0 0 60px;
+
+        a:not(:first-child) {
+            color: $white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: 600;
+        }
     }
-    
-    #next {
-        right: 0;
-        border-radius: 3px 0 0 3px;
+
+    img#slider {
+        width: 65vw;
+        height: 65vh;
+    }
+
+    .hero-text {
+        position: relative;
+        width: 35vw;
+        height: 65vh;
+        
+        .hero-text__content {
+            padding: 100px;
+
+            #hero-text__heading {
+                font-size: 32px;
+                font-weight: 600;
+                letter-spacing: -1.5px;
+                margin-bottom: 15px;
+            }
+
+            #hero-text__sub-heading {
+                color: $dark-gray;
+                line-height: 1.7;
+                margin-bottom: 20px;
+            }
+
+            a {
+                color: $black;
+                font-size: 12px;
+                text-decoration: none;
+                text-transform: uppercase;
+                letter-spacing: 10px;
+            }
+        }
+
+        #prev, #next {
+            cursor: pointer;
+            position: absolute;
+            background-color: $black;
+            bottom: 0%;
+            width: auto;
+            padding: 10px 30px 10px 30px;
+            color: white;
+            font-weight: bold;
+            font-size: 40px;
+            transition: 0.6s ease;
+            user-select: none;
+            display: inline-block;
+            border: none;
+            transition: all 0.5s;
+        }
+        
+        #next {
+            margin-left: 64px;
+        }
+
+    }
+}
+
+.bottom {
+    display: flex;
+    height: 35vh;
+
+    .body-text {
+        padding: 50px;
+
+        &__heading {
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 2.5px;
+            margin-bottom: 15px;
+        }
+
+        &__sub-heading {
+            color: $dark-gray;
+            line-height: 1.7;
+        }
     }
 }
 
