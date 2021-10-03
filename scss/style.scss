@@ -28,15 +28,62 @@ body {
         position: absolute;
         padding: 40px 0 0 60px;
 
-        a:not(:first-child) {
+        a:not(:nth-child(2)) {
             color: $white;
             text-decoration: none;
-            margin-left: 25px;
+            margin-left: 30px;
             font-weight: 600;
         }
 
+        // Hamburger icon
         .ham-menu {
             display: none;
+        }
+
+        // Mobile menu content
+        #my-nav {
+            display: none;
+        }
+    
+        // Hamburger menu
+        .nav-overlay {
+            height: 15%;
+            width: 100%;
+            display: none;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: $white;
+            
+            .overlay-content {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                position: relative;
+                width: 100%;
+                margin-top: 50px;
+                font-size: 12px;
+    
+                a {
+                    margin: 0;
+                    font-weight: 400;
+                }
+            }
+            
+            a, #close-btn {
+                cursor: pointer;
+                padding-left: 20px;
+                margin-top: 48px;
+                text-decoration: none;
+                color: $black;
+                display: block;
+            }
+        
+            #close-btn {
+                position: absolute;
+            }
         }
     }
 
@@ -99,7 +146,6 @@ body {
 
 .bottom {
     display: flex;
-    // height: 30vh;
 
     .body-text {
         padding: 50px;
@@ -176,17 +222,28 @@ body {
 
         nav {
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             position: absolute;
             width: 100%;
             padding: 0;
             margin-top: 30px;
 
-            a:not(:first-child) {
-                display: none;
+            .ham-menu, .logo {
+                display: block;
             }
 
+            .ham-menu {
+                margin-left: 5%;
+            }
+            
+            .logo {
+                margin: 0 auto;
+            }
+
+            a {
+                display: none;
+            }
         }
 
         img#slider {
@@ -241,17 +298,28 @@ body {
 
         nav {
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             position: absolute;
             width: 100%;
             padding: 0;
             margin-top: 30px;
 
-            a:not(:first-child) {
-                display: none;
+            .ham-menu, .logo {
+                display: block;
             }
 
+            .ham-menu {
+                margin-left: 5%;
+            }
+            
+            .logo {
+                margin: 0 auto;
+            }
+
+            a {
+                display: none;
+            }
         }
 
         #prev, #next {
@@ -297,17 +365,28 @@ body {
 
         nav {
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             position: absolute;
             width: 100%;
             padding: 0;
             margin-top: 30px;
 
-            a:not(:first-child) {
-                display: none;
+            .ham-menu, .logo {
+                display: block;
             }
 
+            .ham-menu {
+                margin-left: 5%;
+            }
+            
+            .logo {
+                margin: 0 auto;
+            }
+
+            a {
+                display: none;
+            }
         }
 
         #prev, #next {

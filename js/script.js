@@ -1,4 +1,4 @@
-
+// Image slide
 let slider = document.getElementById('slider');
 let heroHeading = document.getElementById('hero-text__heading');
 let heroSubHeading = document.getElementById('hero-text__sub-heading');
@@ -46,3 +46,32 @@ prevBtn.addEventListener("click", () => {
         counter--;
     }
 })
+
+// Hamburger menu
+const hamIcon = document.getElementById("ham-menu");
+const myNavigation = document.getElementById("close-btn");
+
+hamIcon.addEventListener("click", function() {
+    document.getElementById("my-nav").style.display = "block";
+    document.body.style.position = "fixed";
+    
+    (function() {
+        window.onresize = displayWindowSize;
+        window.onload = displayWindowSize;
+        
+        function displayWindowSize() {
+            let myWidth = window.innerWidth;
+            
+            if (myWidth > 768) {
+                document.getElementById("my-nav").style.display = "none";
+                document.body.style.position = "static";
+            }
+            
+        }
+    })();  
+});
+
+myNavigation.addEventListener("click", function() {
+    document.getElementById("my-nav").style.display = "none";
+    document.body.style.position = "static";
+});
