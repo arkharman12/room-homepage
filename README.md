@@ -14,7 +14,5 @@ Your users should be able to:
 - See hover states for all interactive elements on the page
 - Navigate the slider using either their mouse/trackpad or keyboard
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
-
 ### My solution
 [View](https://arkharman12.github.io/room-homepage/)
